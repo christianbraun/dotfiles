@@ -125,6 +125,7 @@ brew cask install yujitach-menumeters
 brew cask install --appdir="/Applications" dropbox
 brew cask install --appdir="/Applications" basictex
 
+brew cask install --appdir="/Applications" hugin
 brew cask install --appdir="/Applications" handbrake
 brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" libreoffice
