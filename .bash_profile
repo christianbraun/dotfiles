@@ -30,6 +30,10 @@ for file in ~/.{aliases,functions,extra}; do
 done;
 unset file;
 
+source /usr/local/etc/bash_completion
+
+
+
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
