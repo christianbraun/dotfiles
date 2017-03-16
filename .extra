@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Source virtualenvwrapper, added by pydata.sh
+
+export WORKON_HOME=~/VirtualEnvs
+export PROJECT_HOME=~/hacking
+
+export PIP_REQUIRE_VIRTUALENV=true
+source /usr/local/bin/virtualenvwrapper.sh
