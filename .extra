@@ -2,8 +2,14 @@
 
 # Source virtualenvwrapper, added by pydata.sh
 
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
 export WORKON_HOME=~/VirtualEnvs
 export PROJECT_HOME=~/hacking
 
 export PIP_REQUIRE_VIRTUALENV=true
 source /usr/local/bin/virtualenvwrapper.sh
+
+gpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}

@@ -14,13 +14,17 @@ export PATH=/opt/X11/bin:$PATH
 export PATH=/Library/TeX/texbin:$PATH
 export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/opt/gdal2-python/bin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins
 
+export HOMEBREW_MAKE_JOBS=3
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+HOMEBREW_GITHUB_API_TOKEN="cc103f352c7dccb844939425d75fc125ea01ef1d"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -31,12 +35,13 @@ done;
 unset file;
 
 # Add tab completion for many Bash commands
-if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-    source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion;
-fi;
+#if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+#    source "$(brew --prefix)/share/bash-completion/bash_completion";
+#elif [ -f /etc/bash_completion ]; then
+#    source /etc/bash_completion;
+#fi;
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
