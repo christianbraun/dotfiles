@@ -94,10 +94,10 @@ brew install laszip
 brew install liblas --with-laszip
 brew install gdal --with-complete --with-opencl
 brew install pdal --with-laszip
-brew install gdal-20  --with-complete --with-libkml --with-opencl --with-postgresql --with-python3 --with-qhull --with-unsupported
-brew install grass-70 --with--ffmpeg --with-liblas --with-netcdf --with-openblas --with-postgresql
+brew install gdal2  --with-complete --with-libkml --with-opencl --with-postgresql --with-python3 --with-qhull --with-unsupported
+brew install grass7 --with--ffmpeg --with-liblas --with-netcdf --with-openblas --with-postgresql
 brew install saga-gis --with-app --with-liblas --with-postgresql --with-python
-brew install qgis-214 --with-grass --with-r --with-saga-gis --without-server
+brew install qgis2 --with-grass --with-r --with-saga-gis --without-server
 
 # Install Cask
 brew install caskroom/cask/brew-cask
