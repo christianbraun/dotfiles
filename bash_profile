@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export EDITOR="subl"
+
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 
@@ -21,8 +23,12 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins
 
-export HOMEBREW_MAKE_JOBS=3
+export GRASS_PYTHON=/usr/local/bin/python2
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_MAKE_JOBS=6
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_GITHUB_API_TOKEN="92f2d0c9f7c2190623c4f169c15758d373aa6535"
 
 HOMEBREW_GITHUB_API_TOKEN="cc103f352c7dccb844939425d75fc125ea01ef1d"
 
