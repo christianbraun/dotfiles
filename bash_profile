@@ -28,9 +28,6 @@ export GRASS_PYTHON=/usr/local/bin/python2
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_MAKE_JOBS=6
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export HOMEBREW_GITHUB_API_TOKEN="92f2d0c9f7c2190623c4f169c15758d373aa6535"
-
-HOMEBREW_GITHUB_API_TOKEN="cc103f352c7dccb844939425d75fc125ea01ef1d"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
