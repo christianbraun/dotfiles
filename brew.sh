@@ -109,11 +109,10 @@ brew cask install --appdir="/Applications" shuttle
 brew cask install --appdir="/Applications" spectacle
 
 # Development tool casks
-brew cask install --appdir="/Applications" github-desktop
-brew cask install --appdir="/Applications" sublime-text2
+brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" pgadmin3
-brew cask install --appdir="/Applications" pycharm-ce
+brew cask install --appdir="/Applications" pycharm
 
 # Misc casks
 brew cask install --appdir="/Applications" chromium

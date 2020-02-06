@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export EDITOR="subl"
+export EDITOR="/usr/local/bin/subl"
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
@@ -14,16 +14,16 @@ export HISTFILESIZE=10000
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=/opt/X11/bin:$PATH
 export PATH=/Library/TeX/texbin:$PATH
-export PATH=/usr/local/pgsql/bin:$PATH
+# export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/usr/local/opt/gdal2-python/bin:$PATH
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=/usr/local/opt/gdal/bin:$PATH
+# export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 #export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
-export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins
+# export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins
 
-export GRASS_PYTHON=/usr/local/bin/python2
+# export GRASS_PYTHON=/usr/local/bin/python2
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_MAKE_JOBS=6
@@ -38,13 +38,13 @@ done;
 unset file;
 
 # Add tab completion for many Bash commands
-#if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-#    source "$(brew --prefix)/share/bash-completion/bash_completion";
-#elif [ -f /etc/bash_completion ]; then
-#    source /etc/bash_completion;
-#fi;
-
+# brew
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+#macports
+# if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+# 	. /opt/local/etc/profile.d/bash_completion.sh
+# fi
+
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
@@ -57,3 +57,12 @@ export GREP_OPTIONS='--color=auto';
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+##
+# Your previous /Users/cbraun/.bash_profile file was backed up as /Users/cbraun/.bash_profile.macports-saved_2020-01-30_at_09:21:38
+##
+
+# MacPorts Installer addition on 2020-01-30_at_09:21:38: adding an appropriate PATH variable for use with MacPorts.
+# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+

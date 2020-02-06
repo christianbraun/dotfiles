@@ -1,17 +1,16 @@
 #!/bin/bash
 
-# Source virtualenvwrapper, added by pydata.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 export WORKON_HOME=~/dev/VirtualEnvs
-export PROJECT_HOME=~/dev/hacking
+export PROJECT_HOME=~/dev
 
 export PIP_REQUIRE_VIRTUALENV=true
-source /usr/local/bin/virtualenvwrapper.sh
 
 gpip() {
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+    PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
 gpip2() {
     PIP_REQUIRE_VIRTUALENV="" pip2 "$@"
