@@ -8,7 +8,12 @@ export ARCHFLAGS="-arch x86_64"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-export HISTFILESIZE=10000
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # define PATH
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
@@ -26,7 +31,7 @@ export PATH=/usr/local/opt/gdal/bin:$PATH
 # export GRASS_PYTHON=/usr/local/bin/python2
 
 export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_MAKE_JOBS=6
+export HOMEBREW_MAKE_JOBS=12
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Load the shell dotfiles, and then some:
