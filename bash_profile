@@ -21,13 +21,15 @@ export PATH=/opt/X11/bin:$PATH
 export PATH=/Library/TeX/texbin:$PATH
 # export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/usr/local/opt/gdal/bin:$PATH
+export PATH=~/dev/github_com/dateh:$PATH
+# export PATH=/usr/local/opt/gdal/bin:$PATH
+export PATH=~/dev/gdal_python_tools:$PATH
 # export PATH=/usr/local/opt/python/libexec/bin:$PATH
-
+export PATH=/Applications/3DCityDB-Importer-Exporter/bin:$PATH
 #export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # export GDAL_DRIVER_PATH=/usr/local/lib/gdalplugins
-
+# export GDAL_DATA=dev/VirtualEnvs/monesca_p3/lib/python3.7/site-packages/rasterio/gdal_data
 # export GRASS_PYTHON=/usr/local/bin/python2
 
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -44,7 +46,20 @@ unset file;
 
 # Add tab completion for many Bash commands
 # brew
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+fi
+
 #macports
 # if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
 # 	. /opt/local/etc/profile.d/bash_completion.sh
@@ -62,12 +77,3 @@ export GREP_OPTIONS='--color=auto';
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
-
-##
-# Your previous /Users/cbraun/.bash_profile file was backed up as /Users/cbraun/.bash_profile.macports-saved_2020-01-30_at_09:21:38
-##
-
-# MacPorts Installer addition on 2020-01-30_at_09:21:38: adding an appropriate PATH variable for use with MacPorts.
-# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-

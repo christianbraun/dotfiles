@@ -25,3 +25,8 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[pull]
+	rebase = false
+[user]
+	email = christian.braun1980@gmail.com
+	name = Christian Braun

@@ -2,7 +2,7 @@
 
 source /usr/local/bin/virtualenvwrapper.sh
 
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+# export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 export WORKON_HOME=~/dev/VirtualEnvs
 export PROJECT_HOME=~/dev
