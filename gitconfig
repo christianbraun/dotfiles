@@ -27,6 +27,10 @@
 	untracked = cyan
 [pull]
 	rebase = false
+
 [user]
 	email = christian.braun1980@gmail.com
 	name = Christian Braun
+
+[includeIf "gitdir:~/dev/git_list_lu/"]
+	path = ~/dev/git_list_lu/.gitconfig

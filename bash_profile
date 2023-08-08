@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-export EDITOR="/usr/local/bin/subl"
+export EDITOR="/opt/homebrew/bin/subl"
 
 # Set architecture flags
 export ARCHFLAGS="-arch arm64"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -20,9 +22,9 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=/usr/local/bin:$PATH
 #export PATH=/opt/X11/bin:$PATH
 #export PATH=/Library/TeX/texbin:$PATH
+export PATH=/opt/homebrew/sbin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=~/dev/github_com/dateh:$PATH
-# export PATH=/usr/local/opt/gdal/bin:$PATH
 export PATH=~/dev/gdal_python_tools:$PATH
 export PATH=/Applications/3DCityDB-Importer-Exporter/bin:$PATH
 
@@ -33,6 +35,8 @@ export PATH=/Applications/3DCityDB-Importer-Exporter/bin:$PATH
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_MAKE_JOBS=8
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=14
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=60
 
 # Load the shell dotfiles, and then some:
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -53,6 +57,7 @@ export GREP_OPTIONS='--color=auto';
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -68,3 +73,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Setting PATH for Python 2.7
+# The original version is saved in .bash_profile.pysave
+# PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
